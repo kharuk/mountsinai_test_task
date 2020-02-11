@@ -1,0 +1,12 @@
+@import './shared/styles/reset.scss';
+@import './shared/styles/normalize.scss';
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 16px;
+  background-color: #f1f6fb;
+}
