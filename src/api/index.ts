@@ -47,16 +47,14 @@ const docs = [
     id: '2',
     firstName: 'John',
     lastName: 'Smit',
-    avatar:
-      'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+    avatar: 'https://nyulangone.org/images/doctors/f/feldman/1063432235/andrew-j-feldman-square.jpg',
   },
 
   {
     id: '3',
     firstName: 'Barbara',
     lastName: 'Smit',
-    avatar:
-      'https://images.unsplash.com/photo-1569913486515-b74bf7751574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80',
+    avatar: 'https://www.datocms-assets.com/8490/1560828545-featureidrissheadshotuut47p.jpg',
   },
 ];
 
@@ -66,9 +64,7 @@ export const getDoctorById = (id: string) =>
   new Promise<IDocFullInfo>((res, reject) =>
     setTimeout(() => {
       const doctor = docs.find((doctor) => doctor.id === id);
-      const doctorSchedule = schedules.find((item) => {
-        item.id === id;
-      });
+      const doctorSchedule = schedules.find((item) => item.id === id);
       if (doctor && doctorSchedule) {
         res({
           id: doctor.id,

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDocsState, useDocsDispatch } from 'store/context';
 import { fetchDoctors } from 'store/actions';
-import { Loader, ErrorView } from 'shared/ui';
+import { Loader, ErrorView, DoctorInfo } from 'shared/ui';
 import { IDoc } from 'types/docs';
 import { DoctorItem, Wrapper, DoctorListWrapper, Header } from './styles';
 
@@ -22,7 +22,7 @@ export const DoctorList: React.FC = () => {
         {!!docs.length &&
           docs.map((doc: IDoc) => (
             <DoctorItem key={doc.id}>
-              <p>{doc.firstName}</p>
+              <DoctorInfo docInfo={doc} />
             </DoctorItem>
           ))}
       </DoctorListWrapper>
