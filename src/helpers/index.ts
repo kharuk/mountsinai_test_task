@@ -11,9 +11,25 @@ export const generateTimeWithPeriod = (startTime: string, endTime: string, inter
     timeLabels.push({
       id: i.toString(),
       time: startTimeMoment.format('hh:mm A'),
-      isAvailable: Math.random() >= 0.4,
     });
   }
 
   return timeLabels;
+};
+
+export const getWidgetAmount = (width: string) => {
+  switch (width) {
+    case 'xs':
+      return 1;
+    case 'sm':
+      return 1;
+    case 'md':
+      return 2;
+    case 'lg':
+      return 3;
+    case 'xl':
+      return 3;
+    default:
+      return 1;
+  }
 };

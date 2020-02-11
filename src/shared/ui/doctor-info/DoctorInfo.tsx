@@ -10,7 +10,7 @@ interface Props {
 export const DoctorInfo: React.FC<Props> = ({ docInfo: { firstName, lastName, avatar } }) => {
   return (
     <InfoWrapper>
-      <Avatar url={avatar} size={100} />
+      <Avatar url={avatar} size={70} />
       <UserName>
         {firstName} {lastName}
       </UserName>

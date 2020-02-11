@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from 'shared/variables/colors';
+import { RoundButton } from 'shared/ui/button/styles';
 
 export const Header = styled.h1`
   font-size: 2.7rem;
@@ -17,23 +18,17 @@ export const DoctorListWrapper = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   margin: 0 auto;
-  width: 80%;
+  position: relative;
 `;
 
-export const DoctorItem = styled.div`
-  padding: 2rem 3rem;
-  background-color: ${colors.light};
-  margin-left: 2.5rem;
-  box-shadow: 2px 2px 8px 0px ${colors.shadow};
-  border-radius: 12px;
-  transition: transform 0.3s ease-out;
+export const PreviousButton = styled(RoundButton)`
+  position: absolute;
+  left: 10px;
+  top: 20px;
+`;
 
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
+export const NextButton = styled(RoundButton)`
+  position: absolute;
+  top: 20px;
+  right: -35px;
 `;

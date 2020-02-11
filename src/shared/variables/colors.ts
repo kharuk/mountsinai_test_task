@@ -4,4 +4,8 @@ export const colors = {
   whiteLilac: '#E8EDF6',
   light: '#fafafa',
   shadow: '#b5b6bd38',
+  primary: '#e33371',
+  disabled: '#b1a5a5',
+  /*   active: 'pink', */
+  white: '#ffffff',
 };

@@ -21,7 +21,7 @@ const docsReducer = (state: State, action: Action) => {
     case ActionTypes.FETCH_DOCS_FAILURE: {
       return { ...state, loading: false, error: action.error };
     }
-    case ActionTypes.FETCH_DOC_FULL_INFO: {
+    /*     case ActionTypes.FETCH_DOC_FULL_INFO: {
       return { ...state, widgetLoading: true };
     }
     case ActionTypes.FETCH_DOC_FULL_INFO_SUCCESS: {
@@ -29,7 +29,7 @@ const docsReducer = (state: State, action: Action) => {
     }
     case ActionTypes.FETCH_DOC_FULL_INFO_FAILURE: {
       return { ...state, widgetLoading: false, error: action.error };
-    }
+    } */
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }

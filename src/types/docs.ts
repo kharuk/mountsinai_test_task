@@ -19,5 +19,4 @@ export interface ISchedule {
 export interface ITimetable {
   id: string;
   time: string;
-  isAvailable?: boolean;
 }

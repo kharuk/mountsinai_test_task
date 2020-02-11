@@ -1,6 +1,6 @@
 import React from 'react';
 import { DocsProvider } from 'store/context';
-import { DoctorList } from './components/doctors-list/DoctorsList';
+import DoctorList from './components/doctors-list/DoctorsList';
 
 const App = () => {
   return (
