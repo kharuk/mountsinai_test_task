@@ -1,10 +1,10 @@
 import React from 'react';
 import { Avatar } from 'shared/ui';
 import { WidgetWrapper } from './styles';
-import { IDoc } from 'types/docs';
+import { IDocFullInfo } from 'types/docs';
 
 interface Props {
-  docsInfo: Array<IDoc>;
+  docsInfo: Array<IDocFullInfo>;
 }
 
 export const Widget: React.FC<Props> = ({ docsInfo }) => {

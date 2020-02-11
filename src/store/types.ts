@@ -1,7 +1,8 @@
-import { IDoc } from 'types/docs';
+import { IDoc, IDocFullInfo } from 'types/docs';
 
 export interface State {
   docs: Array<IDoc>;
+  doctorInfo: IDocFullInfo;
   isOpen: boolean;
   error?: string;
   loading: boolean;
@@ -9,8 +10,11 @@ export interface State {
 
 export enum ActionTypes {
   FETCH_DOCS = 'FETCH_DOCS',
-  FETCH_SUCCESS = 'FETCH_SUCCESS ',
-  FETCH_FAILED = 'FETCH_FAILED',
+  FETCH_DOCS_SUCCESS = 'FETCH_DOCS_SUCCESS',
+  FETCH_DOCS_FAILURE = 'FETCH_DOCS_FAILURE',
+  FETCH_DOC_FULL_INFO = 'FETCH_DOC_FULL_INFO',
+  FETCH_DOC_FULL_INFO_SUCCESS = 'FETCH_DOC_FULL_INFO_SUCCESS ',
+  FETCH_DOC_FULL_INFO_FAILURE = 'FETCH_DOC_FULL_INFO_FAILURE',
   SHOW_NEXT = 'SHOW_NEXT',
   SHOW_PREVIOUS = 'SHOW_PREVIOUS',
   CHANGE_DATE = 'CHANGE_DATE',
@@ -21,8 +25,11 @@ export enum ActionTypes {
 
 export type Action =
   | { type: ActionTypes.FETCH_DOCS }
-  | { type: ActionTypes.FETCH_SUCCESS; receivedDocs: Array<IDoc> }
-  | { type: ActionTypes.FETCH_FAILED; error: string }
+  | { type: ActionTypes.FETCH_DOCS_SUCCESS; receivedDocs: Array<IDoc> }
+  | { type: ActionTypes.FETCH_DOCS_FAILURE; error: string }
+  | { type: ActionTypes.FETCH_DOC_FULL_INFO }
+  | { type: ActionTypes.FETCH_DOC_FULL_INFO_SUCCESS; doctorInfo: IDocFullInfo }
+  | { type: ActionTypes.FETCH_DOC_FULL_INFO_FAILURE; error: string }
   | { type: ActionTypes.SHOW_NEXT }
   | { type: ActionTypes.SHOW_PREVIOUS }
   | { type: ActionTypes.CHANGE_DATE }

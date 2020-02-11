@@ -5,6 +5,9 @@ export interface IDoc {
   firstName: string;
   lastName: string;
   avatar?: string;
+}
+
+export interface IDocFullInfo extends IDoc {
   schedule: Array<ISchedule>;
 }
 
