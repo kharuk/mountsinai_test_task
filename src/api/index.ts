@@ -17,6 +17,6 @@ const doc = {
   ],
 };
 
-const data: [IDoc] = [doc];
+const data: Array<IDoc> = [doc];
 
 export const getDocs = () => new Promise<IDoc[]>((res) => setTimeout(() => res(data), 1000));
