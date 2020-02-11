@@ -1,18 +1,13 @@
-import React, { useContext } from 'react';
-import { DocsProvider, useCountState, useCountDispatch } from 'store/context';
-import { Widget } from 'components/widget/widget';
+import React from 'react';
+import { DocsProvider } from 'store/context';
+import { DoctorList } from './components/doctors-list/DoctorsList';
 
 const App = () => {
-  //const docsInfo = useContext(DataContext);
   return (
     <DocsProvider>
-      <Widget docsInfo={[]} />
+      <DoctorList />
     </DocsProvider>
   );
 };
 
 export default App;
-
-/*      <DataContext.Provider value={null}>
-      <div> Hello</div>
-    </DataContext.Provider>  */
