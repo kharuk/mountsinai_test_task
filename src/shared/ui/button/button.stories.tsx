@@ -1,7 +1,8 @@
 import { checkA11y } from '@storybook/addon-a11y';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
-import Button from './button';
+import { Button } from './button';
+
 storiesOf('Button', module)
   .addDecorator(checkA11y)
   .add('with text', () => <Button>Hello Button</Button>)
