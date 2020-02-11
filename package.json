@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/pickers": "^3.2.10",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -10,9 +11,12 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.0",
+    "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1",
+    "styled-components": "^5.0.1",
+    "styled-icons": "^9.3.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
