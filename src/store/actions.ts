@@ -11,16 +11,6 @@ const fetchDoctors = async (dispatch: Dispatch) => {
   }
 };
 
-/* const fetchDoctorFullInfo = async (dispatch: Dispatch, id: string) => {
-  dispatch({ type: ActionTypes.FETCH_DOC_FULL_INFO });
-  try {
-    const doctorInfo = await getDoctorById(id);
-    dispatch({ type: ActionTypes.FETCH_DOC_FULL_INFO_SUCCESS, doctorInfo });
-  } catch (error) {
-    dispatch({ type: ActionTypes.FETCH_DOC_FULL_INFO_FAILURE, error: 'Something went wrong' });
-  }
-};
- */
 const closeWidget = (dispatch: Dispatch) => {
   dispatch({ type: ActionTypes.CLOSE });
 };
