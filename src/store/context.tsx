@@ -6,12 +6,6 @@ const DocsDispatchContext = createContext<Dispatch | undefined>(undefined);
 
 const docsReducer = (state: State, action: Action) => {
   switch (action.type) {
-    case ActionTypes.OPEN: {
-      return { ...state, isOpen: true };
-    }
-    case ActionTypes.CLOSE: {
-      return { ...state, isOpen: false, doctorInfo: undefined };
-    }
     case ActionTypes.FETCH_DOCS: {
       return { ...state, loading: true };
     }
@@ -22,7 +16,7 @@ const docsReducer = (state: State, action: Action) => {
       return { ...state, loading: false, error: action.error };
     }
     default: {
-      throw new Error(`Unhandled action type: ${action.type}`);
+      throw new Error(`Unhandled action type`);
     }
   }
 };
@@ -30,9 +24,7 @@ const docsReducer = (state: State, action: Action) => {
 const DocsProvider = ({ children }: DocsProviderProps) => {
   const [state, dispatch] = useReducer(docsReducer, {
     docs: [],
-    isOpen: false,
     loading: false,
-    widgetLoading: false,
   });
   return (
     <DocsStateContext.Provider value={state}>

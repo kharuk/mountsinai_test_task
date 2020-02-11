@@ -11,8 +11,4 @@ const fetchDoctors = async (dispatch: Dispatch) => {
   }
 };
 
-const closeWidget = (dispatch: Dispatch) => {
-  dispatch({ type: ActionTypes.CLOSE });
-};
-
-export { fetchDoctors, closeWidget };
+export { fetchDoctors };
