@@ -10,7 +10,7 @@ const docsReducer = (state: State, action: Action) => {
       return { ...state, isOpen: true };
     }
     case ActionTypes.CLOSE: {
-      return { ...state, isOpen: false };
+      return { ...state, isOpen: false, doctorInfo: undefined };
     }
     case ActionTypes.FETCH_DOCS: {
       return { ...state, loading: true };
@@ -22,13 +22,13 @@ const docsReducer = (state: State, action: Action) => {
       return { ...state, loading: false, error: action.error };
     }
     case ActionTypes.FETCH_DOC_FULL_INFO: {
-      return { ...state, loading: true };
+      return { ...state, widgetLoading: true };
     }
     case ActionTypes.FETCH_DOC_FULL_INFO_SUCCESS: {
-      return { ...state, loading: false, doctorInfo: action.doctorInfo };
+      return { ...state, widgetLoading: false, isOpen: true, doctorInfo: action.doctorInfo };
     }
     case ActionTypes.FETCH_DOC_FULL_INFO_FAILURE: {
-      return { ...state, loading: false, error: action.error };
+      return { ...state, widgetLoading: false, error: action.error };
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
@@ -39,9 +39,9 @@ const docsReducer = (state: State, action: Action) => {
 const DocsProvider = ({ children }: DocsProviderProps) => {
   const [state, dispatch] = useReducer(docsReducer, {
     docs: [],
-    doctorInfo: { id: '', firstName: '', lastName: '', schedule: [] },
     isOpen: false,
     loading: false,
+    widgetLoading: false,
   });
   return (
     <DocsStateContext.Provider value={state}>

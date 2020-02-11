@@ -7,9 +7,9 @@ interface Props {
   docInfo: IDoc;
 }
 
-export const DoctorInfo: React.FC<Props> = ({ docInfo: { id, firstName, lastName, avatar } }) => {
+export const DoctorInfo: React.FC<Props> = ({ docInfo: { firstName, lastName, avatar } }) => {
   return (
-    <InfoWrapper onClick={() => console.log(id)}>
+    <InfoWrapper>
       <Avatar url={avatar} size={100} />
       <UserName>
         {firstName} {lastName}

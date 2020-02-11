@@ -5,5 +5,6 @@ export const WidgetWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
-  border: 1px solid ${colors.whiteLilac};
+  border: 1px solid ${colors.grey};
+  padding: 1rem 2rem;
 `;

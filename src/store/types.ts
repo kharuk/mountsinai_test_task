@@ -2,10 +2,11 @@ import { IDoc, IDocFullInfo } from 'types/docs';
 
 export interface State {
   docs: Array<IDoc>;
-  doctorInfo: IDocFullInfo;
+  doctorInfo?: IDocFullInfo;
   isOpen: boolean;
   error?: string;
   loading: boolean;
+  widgetLoading: boolean;
 }
 
 export enum ActionTypes {

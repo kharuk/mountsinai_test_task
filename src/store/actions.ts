@@ -1,7 +1,7 @@
 import { getDocs, getDoctorById } from 'api';
 import { ActionTypes, Dispatch } from './types';
 
-async function fetchDoctors(dispatch: Dispatch) {
+const fetchDoctors = async (dispatch: Dispatch) => {
   dispatch({ type: ActionTypes.FETCH_DOCS });
   try {
     const receivedDocs = await getDocs();
@@ -9,9 +9,9 @@ async function fetchDoctors(dispatch: Dispatch) {
   } catch (error) {
     dispatch({ type: ActionTypes.FETCH_DOCS_FAILURE, error: 'Something went wrong' });
   }
-}
+};
 
-async function fetchDoctorFullInfo(dispatch: Dispatch, id: string) {
+const fetchDoctorFullInfo = async (dispatch: Dispatch, id: string) => {
   dispatch({ type: ActionTypes.FETCH_DOC_FULL_INFO });
   try {
     const doctorInfo = await getDoctorById(id);
@@ -19,6 +19,10 @@ async function fetchDoctorFullInfo(dispatch: Dispatch, id: string) {
   } catch (error) {
     dispatch({ type: ActionTypes.FETCH_DOC_FULL_INFO_FAILURE, error: 'Something went wrong' });
   }
-}
+};
 
-export { fetchDoctors, fetchDoctorFullInfo };
+const closeWidget = (dispatch: Dispatch) => {
+  dispatch({ type: ActionTypes.CLOSE });
+};
+
+export { fetchDoctors, fetchDoctorFullInfo, closeWidget };
