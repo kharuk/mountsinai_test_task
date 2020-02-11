@@ -58,7 +58,6 @@ const DoctorList: React.FC<Props> = ({ width }) => {
         </>
         {!!displayedDocs.length && displayedDocs.map((doc: IDocFullInfo) => <Widget key={doc.id} scheduleInfo={doc} />)}
       </DoctorListWrapper>
-      {/*  {isOpen && doctorInfo && <Widget scheduleInfo={doctorInfo} />} */}
     </Wrapper>
   );
 };

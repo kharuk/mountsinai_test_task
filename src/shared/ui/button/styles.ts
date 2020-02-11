@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import { colors } from 'shared/variables/colors';
 
-interface IButton {
-  disabled?: boolean;
-}
-
 export const DefaultButton = styled.button`
   box-sizing: border-box;
   display: flex;

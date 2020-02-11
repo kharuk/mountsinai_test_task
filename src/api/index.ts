@@ -12,7 +12,7 @@ const docs = [
     schedule: [
       { day: moment(new Date()), timetable: generateTimeWithPeriod('8:00', '10:05', 10) },
       { day: moment(new Date()).add(1, 'days'), timetable: [] },
-      { day: moment(new Date()).add(2, 'days'), timetable: generateTimeWithPeriod('9:00', '11:00', 30) },
+      { day: moment(new Date()).add(2, 'days'), timetable: generateTimeWithPeriod('9:00', '12:35', 30) },
       { day: moment(new Date()).add(3, 'days'), timetable: generateTimeWithPeriod('8:00', '12:05', 10) },
     ],
   },

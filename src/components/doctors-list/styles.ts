@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from 'shared/variables/colors';
 import { RoundButton } from 'shared/ui/button/styles';
 
 export const Header = styled.h1`

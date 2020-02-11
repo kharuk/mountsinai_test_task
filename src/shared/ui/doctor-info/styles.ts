@@ -11,6 +11,7 @@ export const InfoWrapper = styled.div`
 `;
 
 export const UserName = styled.p`
+  user-select: none;
   font-size: 1.2rem;
   color: ${colors.text};
   margin-left: 1.3rem;

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { colors } from '../../variables/colors';
-import { Button } from '..';
 import { DefaultButton } from '../button/styles';
 
 export const ScheduleContainer = styled.div`
@@ -17,7 +16,6 @@ export const TimetableList = styled.div`
 `;
 
 export const DatePicker = styled.div`
-  width: 70%;
   margin: 0 auto;
 `;
 
@@ -36,4 +34,5 @@ export const Message = styled.p`
   color: #5c5c5c;
   font-weight: 500;
   margin: 1rem 0 2rem 0;
+  user-select: none;
 `;

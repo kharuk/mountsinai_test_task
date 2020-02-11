@@ -4,22 +4,29 @@ import { colors } from 'shared/variables/colors';
 
 export const DateWrapper = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 export const Stepper = styled(RoundButton)`
   background: transparent;
-  border-radius: none;
-  width: 20px;
-  height: 20px;
+  border: none;
   transition: transform 0.3s ease-out;
+  padding: 0;
+  width: fit-content;
+  height: fit-content;
+  opacity: 1;
 
   &:hover {
-    opacity: 0.3;
+    opacity: 0.8;
+    background-color: transparent;
     transform: scale(1.1);
   }
 
   &:disabled {
     color: ${colors.disabled};
+    svg {
+      color: ${colors.disabled};
+    }
     background-color: transparent;
   }
 
@@ -34,7 +41,16 @@ export const Stepper = styled(RoundButton)`
 `;
 
 export const DateOutput = styled.p`
+  user-select: none;
   font-size: 1.2rem;
   font-weight: 400;
   color: ${colors.text};
+  margin: 0 0.5rem;
+  span {
+    margin-right: 0.5rem;
+  }
+
+  svg {
+    margin-bottom: 0.3rem;
+  }
 `;
